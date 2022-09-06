@@ -31,7 +31,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 // Material Popups & Modals
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -41,6 +41,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 
 @NgModule({
   declarations: [],
@@ -80,7 +82,8 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    ScrollingModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -99,6 +102,7 @@ import { MatTableModule } from '@angular/material/table';
     MatDividerModule,
     MatExpansionModule,
     MatGridListModule,
+    
     MatListModule,
     MatStepperModule,
     MatTabsModule,
@@ -117,7 +121,9 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
-  ]
+    MatTableModule,
+    MatNativeDateModule,
+    ScrollingModule,
+  ], providers: [MatDatepickerModule]
 })
 export class MaterialModule { }

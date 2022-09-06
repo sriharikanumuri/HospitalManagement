@@ -1,0 +1,35 @@
+<router-outlet></router-outlet>
+<div class="row  mt-2">
+    <div class="col-6 text-center">
+        <button (click)="onclickopendialog()" mat-raised-button class="color">+ Add Patient</button>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-8">
+        <table>
+            <thead class="tablecolor">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Check-in</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tabledata">
+                    <td>{{data.name}}</td>
+                    <td>{{data.age}}</td>
+                    <td>{{data.gender}}</td>
+                    <td>{{data.DateOfAdmint}}</td>
+                    <td>
+                        <mat-icon (click)="onclickeditdialog()">edit</mat-icon>
+                        <mat-icon>delete</mat-icon>
+                        <mat-icon>person</mat-icon>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

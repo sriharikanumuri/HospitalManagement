@@ -1,0 +1,58 @@
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-6 style d-flex">
+            <span class="material-icons">
+                mode_edit_outline
+            </span>
+            Edit Patient
+        </div>
+    </div>
+
+    <div class="row border-top">
+
+
+        <div class="col-12">
+            <mat-label>*Name</mat-label>
+            <input style="width:100%;" type="text" id="fname" name="fname"><br>
+        </div>
+
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-2">
+            <mat-label>*Age</mat-label>
+            <input style="width:70px;" type="text" id="fname" name="fname"><br>
+
+        </div>
+        <div class="col-10">
+            <mat-label>Sex</mat-label>
+            <div class="row">
+                <div class="col-4">
+                    <mat-radio-button>Male </mat-radio-button>
+                </div>
+                <div class="col-4">
+                    <mat-radio-button>Female</mat-radio-button>
+                </div>
+                <div class="col-4">
+                    <mat-radio-button>Undisclosed</mat-radio-button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row ">
+        <div class="col-12 mt-3 ">
+            <mat-label>*Check-in Date</mat-label>
+            <input style="width:100%;" matInput type="date">
+        </div>
+    </div>
+
+    <div class="row border-top mt-2 ">
+        <div class=" text-end col-9 pt-2">
+            <button mat-button class="Green">Save</button>
+        </div>
+        <div class="col-2 pt-2">
+            <button mat-button class="cancel">Cancel</button>
+        </div>
+    </div>
+</div>
