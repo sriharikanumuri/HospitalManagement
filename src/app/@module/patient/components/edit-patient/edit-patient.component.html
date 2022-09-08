@@ -1,19 +1,16 @@
-<div class="container-fluid p-0">
+<div class="container-fluid ">
     <div class="row">
-        <div class="col-6 style d-flex">
-            <span class="material-icons">
-                mode_edit_outline
-            </span>
-            Edit Patient
+        <div class="col-6 style">
+            +Edit Patient
         </div>
     </div>
+    <div [formGroup]="_editpatientformgroup" class="">   
+         <div class="row border-top">
 
-    <div class="row border-top">
 
-
-        <div class="col-12">
+        <div class="col-12" >
             <mat-label>*Name</mat-label>
-            <input style="width:100%;" type="text" id="fname" name="fname"><br>
+            <input formControlName="name" style="width:100%;"><br>
         </div>
 
     </div>
@@ -21,38 +18,34 @@
     <div class="row mt-2">
         <div class="col-2">
             <mat-label>*Age</mat-label>
-            <input style="width:70px;" type="text" id="fname" name="fname"><br>
+            <input formControlName="age" [type]="'number'" max="99" min="1" style="width:70px;" type="text" id="fname" name="fname"><br>
 
         </div>
         <div class="col-10">
-            <mat-label>Sex</mat-label>
-            <div class="row">
-                <div class="col-4">
-                    <mat-radio-button>Male </mat-radio-button>
-                </div>
-                <div class="col-4">
-                    <mat-radio-button>Female</mat-radio-button>
-                </div>
-                <div class="col-4">
-                    <mat-radio-button>Undisclosed</mat-radio-button>
-                </div>
-            </div>
-        </div>
+         <mat-label>Gender</mat-label><br>
+       
+                <mat-radio-group formControlName="sex"  aria-label="Select an option">
+                   
+                    <mat-radio-button *ngFor="let sex of gender" [value]="sex.sex">{{sex.name}}</mat-radio-button>
+                </mat-radio-group>
+               
+   
 
     </div>
     <div class="row ">
-        <div class="col-12 mt-3 ">
+        <div class="col-12 mt-3" >
             <mat-label>*Check-in Date</mat-label>
-            <input style="width:100%;" matInput type="date">
+            <input formControlName="checkindate" style="width:100%;" matInput type="date">
         </div>
     </div>
 
     <div class="row border-top mt-2 ">
         <div class=" text-end col-9 pt-2">
-            <button mat-button class="Green">Save</button>
+            <button (click)="Onclickupdate()"  mat-button class="Green">Save</button>
         </div>
         <div class="col-2 pt-2">
-            <button mat-button class="cancel">Cancel</button>
+            <button mat-button class="cancel" (click)="onNoClick()">Cancel</button>
         </div>
-    </div>
+    </div></div>
+
 </div>

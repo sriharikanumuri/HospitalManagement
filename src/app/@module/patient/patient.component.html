@@ -17,14 +17,14 @@
             </thead>
             <tbody>
                 <tr *ngFor="let data of tabledata">
-                    <td>{{data.name}}</td>
-                    <td>{{data.age}}</td>
-                    <td>{{data.gender}}</td>
-                    <td>{{data.DateOfAdmint}}</td>
+                    <td>{{data.patientname}}</td>
+                    <td>{{data.patientage}}</td>
+                    <td>{{data.patientgender}}</td>
+                    <td>{{data.checkindate}}</td>
                     <td>
-                        <mat-icon (click)="onclickeditdialog()">edit</mat-icon>
-                        <mat-icon>delete</mat-icon>
-                        <mat-icon>person</mat-icon>
+                        <mat-icon (click)="onclickeditdialog(data)">edit</mat-icon>
+                        <mat-icon (click)="onclickdelete(data.patientdetailsiduniquekey)">delete</mat-icon>
+                        <mat-icon (click)="onclickpatienthistory()">person</mat-icon>
                     </td>
                 </tr>
             </tbody>
